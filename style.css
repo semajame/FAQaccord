@@ -1,0 +1,152 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+#### Text
+
+- Very dark desaturated blue: hsl(238, 29%, 16%)
+- Soft red: hsl(14, 88%, 65%)
+
+#### Gradient
+
+Background gradient:
+
+- Soft violet: hsl(273, 75%, 66%)
+- Soft blue: hsl(240, 73%, 65%)
+
+### Neutral
+
+#### Text
+
+- Very dark grayish blue: hsl(237, 12%, 33%)
+- Dark grayish blue: hsl(240, 6%, 50%)
+
+#### Dividers
+
+- Light grayish blue: hsl(240, 5%, 91%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 12px
+
+### Font
+
+font-family: 'Kumbh Sans', sans-serif;
+
+- Family: [Kumbh Sans](https://fonts.google.com/specimen/Kumbh+Sans)
+- Weights: 400, 700 */
+
+:root{
+    --ff: 'Kumbh Sans', sans-serif;
+    --vdgb: hsl(237, 12%, 33%);
+    --dgb: hsl(240, 6%, 50%);
+    --divider-color: hsl(240, 5%, 91%);
+    --sr: hsl(14, 88%, 65%);
+    --fs: 12px;
+    --fs1: 1rem;
+    --fs2: 2rem;
+}
+
+body{
+    background-color:hsl(273, 75%, 66%);
+    font-family: var(--ff);
+    overflow: hidden;
+}
+
+.container{
+    margin: 5rem 10rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+    border-radius: 1.5rem;
+    /* height: 500px; */
+}
+
+.left-images{
+    background: url(/img/bg-pattern-desktop.svg) no-repeat center;
+    position: relative;
+    left: -5rem;
+    top: -5rem;
+    height: 100%;
+}
+
+.woman{
+    max-width: 100%;
+    position: relative;
+    top: 5rem;
+}
+
+.box{
+    position: absolute;
+    top: 13rem;
+    left: -2.5rem;
+}
+
+.right-content{
+    padding: 3rem 3rem 3rem 0;
+}
+
+.right-content h1{
+    font-size: var(--fs2);
+    margin-bottom: 2rem;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+}
+
+.content1, .content2, .content3, .content4, .content5{
+    border-bottom: 1px solid var(--divider-color);
+    padding: 1rem 1rem 1rem 0;
+    cursor: pointer;
+}
+
+.header1.active, .header2.active, .header3.active, .header4.active, .header5.active{
+    font-weight: 700;
+    color: black;
+    
+}
+
+.header1:hover, .header2:hover, .header3:hover, .header4:hover, .header5:hover{
+    color: var(--sr);
+    
+}
+
+.active-paragraph1, .active-paragraph2, .active-paragraph3, .active-paragraph4, .active-paragraph5{
+    margin-top: 1rem;
+    display: none;
+    transition: all 0.5s;
+}
+
+.active-paragraph1.active, .active-paragraph2.active, .active-paragraph3.active, .active-paragraph4.active, .active-paragraph5.active{
+    display: block;
+    max-width: 425px;
+}
+
+.right-content p{
+    color: var(--vdgb);
+}
+
+.arrow-down1, .arrow-down2, .arrow-down3, .arrow-down4, .arrow-down5{
+    transition: 300ms ease-in-out;
+}
+
+.arrow-down1.active, .arrow-down2.active, .arrow-down3.active, .arrow-down4.active, .arrow-down5.active{
+    transform: rotate(180deg);
+    transition: 300ms ease-in-out;
+}
